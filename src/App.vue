@@ -1,9 +1,13 @@
 <template>
+  <!-- Header global -->
   <AppHeader @changePage="page => this.page = page" />
 
   <div class="bg-white">
     <div class="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6">
+        <!-- Page de sorts -->
         <AppSpell v-if="page == 'search'" :spells="spells" />
+
+        <!-- Page de statistiques -->
         <AppStatistics v-if="page === 'statistics'" :spells="spells" />
     </div>
   </div>
