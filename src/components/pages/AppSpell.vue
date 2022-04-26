@@ -5,7 +5,7 @@
   <p>{{ spellSearched.length }} sorts correspondants à votre recherche</p>
 
   <!-- Boucle avec les sorts recherchés -->
-  <SpellDetails v-for="spell in spellSearched" :key="spell[1]" :spell="spell" />
+  <SpellDetails v-for="spell in spellSearched" :key="spell[1] + spell[2]" :spell="spell" />
 </template>
 
 <script>
