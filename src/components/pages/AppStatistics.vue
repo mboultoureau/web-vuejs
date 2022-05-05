@@ -44,6 +44,8 @@
 </template>
 
 <script>
+import livres from "../../scripts/livres";
+
 export default {
   name: "AppStatistics",
   props: ["spells"],
@@ -61,17 +63,7 @@ export default {
       return schools;
     },
     livresCount() {
-      let livres = {};
-
-      this.spells.forEach((spell) => {
-        if (livres[spell[0]] != undefined) {
-          livres[spell[0]] = livres[spell[0]] + 1;
-        } else {
-          livres[spell[0]] = 1;
-        }
-      });
-
-      return livres;
+      return livres(this.spells);
     },
   },
 };

@@ -11,6 +11,7 @@
 
         <nav class="md:flex space-x-10">
           <a style="cursor: pointer;" @click="$emit('changePage', 'search')" class="text-base font-medium text-gray-500 hover:text-gray-900"> Accueil </a>
+          <a style="cursor: pointer;" @click="$emit('changePage', 'config')" class="text-base font-medium text-gray-500 hover:text-gray-900"> Configuration </a>
           <a style="cursor: pointer;" @click="$emit('changePage', 'statistics')" class="text-base font-medium text-gray-500 hover:text-gray-900"> Statistiques </a>
         </nav>
       </div>

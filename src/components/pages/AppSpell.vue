@@ -26,8 +26,16 @@ export default {
   },
   computed: {
     spellSearched() {
-      // Filtre sur les titres comportant la recherche
-      return this.spells.filter((spell) => spell[1].toLowerCase().includes(this.search.toLowerCase()))
+      let spells = this.spells;
+      let livreFilter = localStorage.getItem('livreFilter') || 'all';
+
+      // Filtre sur les livres
+      if (livreFilter != 'all') {
+        spells = spells.filter(spell => spell[0] == livreFilter);
+      }
+
+      // Filtre sur la recherche
+      return spells.filter((spell) => spell[1].toLowerCase().includes(this.search.toLowerCase()));
     }
   }
 }

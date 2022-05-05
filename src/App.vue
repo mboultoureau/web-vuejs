@@ -7,6 +7,9 @@
         <!-- Page de sorts -->
         <AppSpell v-if="page == 'search'" :spells="spells" />
 
+        <!-- Page de configuration -->
+        <AppConfig v-if="page == 'config'" :spells="spells" />
+
         <!-- Page de statistiques -->
         <AppStatistics v-if="page === 'statistics'" :spells="spells" />
     </div>
@@ -17,6 +20,7 @@
 import AppStatistics from './components/pages/AppStatistics.vue';
 import AppHeader from './components/parts/Header.vue';
 import AppSpell from './components/pages/AppSpell.vue';
+import AppConfig from './components/pages/AppConfig.vue';
 import Data from './assets/data.min.js';
 
 export default {
@@ -30,6 +34,7 @@ export default {
   components: {
     AppHeader,
     AppSpell,
+    AppConfig,
     AppStatistics
   }
 }
