@@ -1,4 +1,6 @@
-# Spells
+# Web Vue.js
+
+Ce projet a été réalisé dans le cadre du cours de Technologie Web à l'[ENSSAT](https://www.enssat.fr/). Il a pour but d'apprendre les bases de Vue.js avec une page pour rechercher et obtenir des statistiques sur une base de données de sorts.
 
 ## Description
 
